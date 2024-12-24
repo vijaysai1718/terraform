@@ -1,5 +1,15 @@
+resource "aws_instance" "expense" {
+instance_type = "t3.micro"
+ami = "ami-090252cbe067a9e58"
+vpc_security_group_ids = []
+
+tags = {
+    Name = "db"
+}
+}
+
 resource "aws_security_group" "allow_tls" {
-name = "allowing_tls"
+   name = "allowing_tls"
 description = "creating the security group for testing"
   #terraform block
     ingress {
@@ -15,20 +25,49 @@ description = "creating the security group for testing"
         protocol         = "-1" # -1 all protocols
         cidr_blocks      = ["0.0.0.0/0"]
     }
-tags  = {
-    name = "allow_tls"
-    createdby = "vijaysai"
-}
-
-}
-
-resource "aws_instance" "db" {
-    ami  = "ami-090252cbe067a9e58"
-    vpc_security_group_ids = [aws_security_group.allow_tls.id]
-    instance_type = "t3.micro"
-
-    tags = {
-        name="db"
+    tags  = {
+        name = "allow_tls"
+        createdby = "vijaysai"
     }
-  
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
