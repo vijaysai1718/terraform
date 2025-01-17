@@ -4,7 +4,8 @@ Aws provider we using it
 
 ### Terraform Init
 
-Intallize one time activity.
+** Downloads and installs the required provider plugins (e.g., AWS, Azure, Google Cloud). **
+Prepares the directory for other Terraform commands. 
 
 ### Terraform Plan 
 
