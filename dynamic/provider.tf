@@ -7,16 +7,6 @@ terraform {
   }
 
 
-backend  "s3" {
-bucket = "vijay-remote-state"
-key = "remote-state-demo"
-region = "us-east-1"
-dynamodb_table = "vijay-remotestate-lock"
-
-
-}
-
-
 }
 
 
