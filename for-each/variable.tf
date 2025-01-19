@@ -12,7 +12,7 @@ variable "ami_id" {
 }
 
 variable "zone_id" {
-    default = "Z04491043SWYCLS2L1CW9"
+    default = "Z05550032645OFC1SOEB5"
 }
 
 variable "common_tags" {
